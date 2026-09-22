@@ -1,0 +1,18 @@
+N=int(input("Enter jar limit:"))
+K=int(input("Enter min limit:"))
+t=N
+i=1
+ts=0
+while i!=0:
+  x=int(input("Enter candies to sold:"))
+  if x>N:
+    print("Invalid input")
+  else:
+    N=N-x
+    ts=ts+x
+    print("Sold:",x)
+    if N<=K:
+      N=t
+    print("Available candies:",N)
+    i=input("Do you want to continue(1 or 0):")
+    print("Total sold",ts)

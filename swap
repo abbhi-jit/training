@@ -1,0 +1,17 @@
+a = int(input("Enter first number (a): "))
+b = int(input("Enter second number (b): "))
+t = a
+a = b
+b = t
+print(f"after temp swap: a = {a}, b = {b}")
+a, b = b, a
+a, b = b, a
+print(f"after tuple swap: a = {a}, b = {b}")
+a = a + b
+b = a - b
+a = a - b
+print(f"after arithmetic swap: a = {a}, b = {b}")
+a = a ^ b
+b = a ^ b
+a = a ^ b
+print(f"after xor swap: a = {a}, b = {b}")

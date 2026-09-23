@@ -1,0 +1,8 @@
+n,ranks = int(input("visits: ")),list(map(int, input("Enter the ranks: ").split()))
+min_rank = ranks[0]
+cut = 0
+for i in range(1, n):
+    if ranks[i] < min_rank:
+        min_rank = ranks[i]
+        cut += 1
+print("no.of cuts:",cut)

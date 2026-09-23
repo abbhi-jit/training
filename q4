@@ -1,0 +1,14 @@
+r=int(input("number of rats: "))
+unit= int(input("amount of food each rat consumes: "))
+n=int(input("number of houses: "))
+arr = list(map(int, input("amount of food in each house: ").split()))
+total= r * unit
+if sum(arr) < total:
+    print(0)
+else:
+    food = 0
+    for i in range(n):
+        food += arr[i]
+        if food >= total:
+            print(i + 1)
+            break
